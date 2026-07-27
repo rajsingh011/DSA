@@ -1,22 +1,30 @@
 #include <iostream>
 using namespace std;
 
-class Solution {
+ class Solution {
 public:
     void pattern8(int n) {
-        for (int i = 1; i <= n; i++) {
-            // print (i-1) leading spaces
-            for (int j = 1; j <= i - 1; j++) {
+  int i,j;
+        for (i=0;i<n;i++){
+            for(j=0;j<i;j++){
                 cout << " ";
             }
-            // print stars: 2*(n-i)+1
-            for (int j = 1; j <= 2 * (n - i) + 1; j++) {
-                cout << "*";
+                for (j=0;j<2*n-(2*i+1);j++){
+                    cout<<"*";
+                }
+            for (j=0;j<i;j++){
+                cout<< " ";
             }
-            cout << "\n";
+
+cout << endl;
+
         }
-    }
-};
+
+
+        }
+
+
+    };
 
 int main (){
     int n ;
