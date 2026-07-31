@@ -3,22 +3,24 @@ using namespace std;
 
 class Solution {
 public:
-    int countDigit(int n) {
+    int reverseNumber(int n) {
+int revNum = 0;
+int dub = n;
+while (n>0){
+    int ld=n%10;
+    revNum = (revNum*10)+ld;
+    n=n/10;
+}
 
-        int cnt = 0;
-
-        while (n > 0) {
-            cnt++;
-            n /=10;
-        }
-
-        return cnt;
+if (dub == revNum) cout << "true";
+else cout << "false";
+return revNum;
     }
 };
-
-int main() {
-    Solution obj;
-    cout << obj.countDigit(234);
-
+int main(){
+    int n;
+    n=111;
+    Solution Obj;
+   Obj.reverseNumber(n);
     return 0;
 }
