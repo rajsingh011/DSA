@@ -4,7 +4,7 @@ using namespace std;
 class Solution {
 public:
     int reverseNumber(int n) {
-int revNum = 0;
+long long revNum = 0;
 int dub = n;
 while (n>0){
     int ld=n%10;
